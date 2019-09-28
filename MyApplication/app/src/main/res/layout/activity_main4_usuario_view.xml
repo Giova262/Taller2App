@@ -4,30 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Main4Activity_usuarioView">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="216dp"
-            app:srcCompat="@android:drawable/ic_menu_gallery" />
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="129dp">
 
         <Button
-            android:id="@+id/button_registrar"
+            android:id="@+id/button_consultarPerfil"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="REGISTRAR" />
+            android:text="Consultar Perfil" />
 
         <Button
-            android:id="@+id/button_login"
+            android:id="@+id/button_hacerPedido"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Login" />
+            android:text="Hacer Pedido" />
+
+        <Button
+            android:id="@+id/button_misPedidos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="mis pedidos" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

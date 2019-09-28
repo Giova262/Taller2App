@@ -2,4 +2,6 @@
     <string name="app_name">My Application</string>
     <string name="app_nombre">Ingresa tu nombre</string>
     <string name="app_edad">Id de consulta</string>
+    <string name="HOLAAAA" />
+    <string name="kokok" />
 </resources>

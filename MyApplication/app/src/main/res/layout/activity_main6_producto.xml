@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main6Activity_producto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView_"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:text="Producto 1"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/textView_direccionOrigen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Producto Origen" />
+
+        <TextView
+            android:id="@+id/textView_precio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Producto Precio" />
+
+        <EditText
+            android:id="@+id/editText_cantidadUnidades"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Ingrese cantidad de Unidades"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/editText_ingreseDireccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Ingrese su Direccion"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/button_confirmarPedido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Confirmar Pedido" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

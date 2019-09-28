@@ -10,11 +10,12 @@ import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
 import org.json.JSONObject
 
-class MainActivity_registrar : AppCompatActivity() {
+class Main2Activity_registerUsuario : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main_registrar)
+        setContentView(R.layout.activity_main2_register_usuario)
+
 
         /*Obetener Elementos*/
         val editTex_nombre = findViewById<EditText>( R.id.editText_nombreRegistrar )
@@ -61,11 +62,9 @@ class MainActivity_registrar : AppCompatActivity() {
                 }
             )
 
-           // queue.add( jsonObjectRequest )
+            // queue.add( jsonObjectRequest )
 
 
         }
-
-
     }
 }

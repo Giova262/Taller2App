@@ -23,35 +23,45 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         /* Obtener elementos */
-        val boton_consultarId = findViewById<Button>(R.id.button_consultarID)
-        val boton_consultarAll = findViewById<Button>(R.id.button_consultarAll)
+        //val boton_consultarId = findViewById<Button>(R.id.button_consultarID)
+        //val boton_consultarAll = findViewById<Button>(R.id.button_consultarAll)
         val boton_registrar = findViewById<Button>(R.id.button_registrar)
+        val boton_login = findViewById<Button>(R.id.button_login)
 
 
 
         /*Escena consultar ALL*/
-        boton_consultarAll?.setOnClickListener {
+       /* boton_consultarAll?.setOnClickListener {
 
             val intent:Intent = Intent(this,MainActivity_consultarAll::class.java)
             startActivity(intent)
 
-        }
+        }*/
 
         /*Escena Consulta por ID */
-        boton_consultarId?.setOnClickListener {
+       /* boton_consultarId?.setOnClickListener {
 
             val intent:Intent = Intent(this,MainActivity_consultarPorID::class.java)
             startActivity(intent)
 
-        }
+        }*/
 
         /*Escena Registrar*/
         boton_registrar?.setOnClickListener {
 
-            val intent:Intent = Intent(this,MainActivity_registrar::class.java)
+            val intent:Intent = Intent(this,Main2Activity_registerUsuario::class.java)
             startActivity(intent)
 
         }
+
+        /*Escena Login*/
+        boton_login?.setOnClickListener {
+
+            val intent:Intent = Intent(this,Main3Activity_login::class.java)
+            startActivity(intent)
+
+        }
+
 
     }
 }
