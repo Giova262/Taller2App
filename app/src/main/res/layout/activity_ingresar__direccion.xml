@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -12,6 +13,20 @@
         android:background="#CBE6AD"
         app:layout_anchor="@+id/relativeLayout"
         app:layout_anchorGravity="center">
+
+        <Button
+            android:id="@+id/btn_aceptar"
+            style="@style/FirebaseUI.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="257dp"
+            android:layout_marginLeft="257dp"
+            android:layout_marginBottom="104dp"
+            android:text="Aceptar"
+            tools:visibility="visible" />
 
         <ImageView
             android:id="@+id/imageView3"
@@ -26,45 +41,6 @@
             app:srcCompat="@drawable/foodielogo" />
 
         <Button
-            android:id="@+id/btn_perfil"
-            style="@style/FirebaseUI.Button"
-            android:layout_width="267dp"
-            android:layout_height="58dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="73dp"
-            android:layout_marginLeft="73dp"
-            android:layout_marginTop="481dp"
-            android:text="Editar Perfil" />
-
-        <Button
-            android:id="@+id/btn_consulta_pedidos"
-            style="@style/FirebaseUI.Button"
-            android:layout_width="267dp"
-            android:layout_height="58dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="73dp"
-            android:layout_marginLeft="73dp"
-            android:layout_marginTop="277dp"
-            android:text="Comsultar Pedidos" />
-
-        <Button
-            android:id="@+id/btn_pedir"
-            style="@style/FirebaseUI.Button"
-            android:layout_width="267dp"
-            android:layout_height="58dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="73dp"
-            android:layout_marginLeft="73dp"
-            android:layout_marginTop="373dp"
-            android:text="Pedir" />
-
-        <Button
             android:id="@+id/btn_volver"
             style="@style/FirebaseUI.Button"
             android:layout_width="wrap_content"
@@ -72,10 +48,36 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="81dp"
-            android:layout_marginLeft="81dp"
-            android:layout_marginBottom="49dp"
-            android:text="Volver" />
+            android:layout_marginStart="73dp"
+            android:layout_marginLeft="73dp"
+            android:layout_marginBottom="104dp"
+            android:text="Volver"
+            tools:visibility="visible" />
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="286dp"
+            android:layout_height="218dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="57dp"
+            android:layout_marginLeft="57dp"
+            android:layout_marginTop="309dp" />
+
+        <EditText
+            android:id="@+id/editText_Direccion"
+            android:layout_width="279dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="62dp"
+            android:layout_marginLeft="62dp"
+            android:layout_marginTop="217dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Direccion" />
 
     </RelativeLayout>
 

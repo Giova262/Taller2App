@@ -18,7 +18,7 @@ class Consulta_todos_pedidos : AppCompatActivity(){
 
 
         /*Obtener Elementos*/
-        val boton_volver = findViewById<Button>(R.id.btn_volver2)
+        val boton_volver = findViewById<Button>(R.id.btn_volver)
         val tv_todos_pedidos = findViewById(R.id.tvTodosPedidos) as TextView
 
 

@@ -11,7 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Confirmar_Entrega"></activity>
+        <activity android:name=".Saldo_delivery"></activity>
+        <activity android:name=".Pedido_activo_delivery" />
+        <activity android:name=".Historicos_delivery" />
+        <activity android:name=".Demanda_de_pedidos" />
+        <activity android:name=".Ingresar_Direccion" />
+        <activity android:name=".Login" />
+        <activity android:name=".Confirmar_Entrega" />
         <activity android:name=".Mapa" />
         <activity android:name=".Chat" />
         <activity android:name=".Informacion_Pedido" />
@@ -44,6 +50,12 @@
         <activity
             android:name=".Pedir"
             android:label="@string/app_name" />
+        <meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value="AIzaSyA_8d8pMcb0BS0bYzdWqnaWVSyUV-l5gTA"/>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
     </application>
 
 </manifest>

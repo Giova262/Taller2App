@@ -1,15 +1,15 @@
 package com.taller2.foodie
 
 import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import androidx.appcompat.app.AppCompatActivity
 
-class Pedir : AppCompatActivity() {
+class Ingresar_Direccion : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.pedir)
-
+        setContentView(R.layout.activity_ingresar__direccion)
 
         /*Obtener Elementos*/
         val boton_volver = findViewById<Button>(R.id.btn_volver)
@@ -22,8 +22,5 @@ class Pedir : AppCompatActivity() {
             startActivity(intent)
 
         }
-
-
-
     }
 }

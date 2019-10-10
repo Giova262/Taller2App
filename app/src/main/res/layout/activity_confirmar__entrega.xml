@@ -27,7 +27,7 @@
             app:srcCompat="@drawable/foodielogo" />
 
         <Button
-            android:id="@+id/btn_volver2"
+            android:id="@+id/btn_volver"
             style="@style/FirebaseUI.Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -39,6 +39,31 @@
             android:layout_marginBottom="104dp"
             android:text="Volver"
             tools:visibility="visible" />
+
+        <Button
+            android:id="@+id/btn_confirmar_entrega"
+            style="@style/FirebaseUI.Button"
+            android:layout_width="258dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="72dp"
+            android:layout_marginLeft="72dp"
+            android:layout_marginBottom="217dp"
+            android:text="Confirmar entrega" />
+
+        <TextView
+            android:id="@+id/tv_pedido"
+            android:layout_width="237dp"
+            android:layout_height="143dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="70dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="239dp"
+            android:text="Entrega Pendiente" />
 
     </RelativeLayout>
 

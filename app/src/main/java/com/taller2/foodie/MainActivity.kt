@@ -15,118 +15,31 @@ import android.content.Context
 
 
 class MainActivity : AppCompatActivity() {
-    lateinit var providers : List<AuthUI.IdpConfig>
-    val MY_REQUEST_CODE: Int = 7117 // cualquier numero
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //init
-        providers= Arrays.asList<AuthUI.IdpConfig>(
-           AuthUI.IdpConfig.EmailBuilder().build(),
-           AuthUI.IdpConfig.FacebookBuilder().build(),
-            AuthUI.IdpConfig.GoogleBuilder().build(),
-            AuthUI.IdpConfig.PhoneBuilder().build()
+        /*Obtener Elementos*/
+        val boton_login = findViewById<Button>(R.id.btn_login)
+        val boton_register = findViewById<Button>(R.id.btn_register)
 
-            )
-        showSignInOptions()
-        //eventos
-        /*
-        btn_sign_out.setOnClickListener {
-            AuthUI.getInstance().signOut(this@MainActivity)
-                .addOnCompleteListener {
-                    btn_sign_out.isEnabled=false
-                    showSignInOptions()
-                }
-                .addOnFailureListener {
-                    e->Toast.makeText(this@MainActivity, e.message, Toast.LENGTH_SHORT).show()
-                }
+
+
+        boton_login?.setOnClickListener {
+
+            val intent: Intent = Intent(this,Login::class.java)
+            startActivity(intent)
+
+        }
+        boton_register?.setOnClickListener {
+
+            val intent: Intent = Intent(this,Perfil::class.java)
+            startActivity(intent)
 
         }
 
-*/
 
-    }
-
-    private fun showSignInOptions() {
-
-
-
-        startActivityForResult(AuthUI.getInstance().createSignInIntentBuilder()
-            .setAvailableProviders(providers)
-           // .setTheme(R.style.MyTheme)
-            .setTheme(R.style.CustomTheme)
-            .setLogo(R.drawable.foodielogo)
-            .build(), MY_REQUEST_CODE)
-    }
-
-    private fun mostrar_menu(){
-        val intent:Intent = Intent(this,Menu_Delivery::class.java)
-        startActivity(intent)
-
-
-    }
-    private fun guardar_datos_perfil(nombre: String?, mail: String?, photoUrl: Uri?, num_cel: String?){
-
-
-
-
-        val sharedPreference =  getSharedPreferences("Datos_perfil", Context.MODE_PRIVATE)
-
-        val editor = sharedPreference.edit()
-        editor.putString("name",nombre)
-        editor.putString("email",mail)
-        editor.putString("photo_url",photoUrl.toString())
-        editor.putString("cel_number",num_cel)
-        editor.commit()
-
-    }
-    private fun mostrar_formulario_registro(nombre: String?, mail: String?, photoUrl: Uri?, num_cel: String?) {
-       setContentView(R.layout.perfil)
-         var etNombre: EditText
-         var etMail: EditText
-         var ivfoto: ImageView
-        var etNumTel: EditText
-        var boton_aceptar: Button
-
-            etNombre = findViewById(R.id.edNombre) as EditText
-            etMail = findViewById(R.id.edMail) as EditText
-            ivfoto = findViewById(R.id.ivFoto) as ImageView
-            etNumTel = findViewById(R.id.edTelefono) as EditText
-
-
-        etNombre.setText(nombre)
-        etMail.setText(mail)
-        etNumTel.setText(num_cel)
-        Picasso.get().load( photoUrl).into(ivfoto)
-
-    }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-       // val profilePic = findViewById<ImageView>(R.id.imageView2)
-        if (requestCode==MY_REQUEST_CODE)
-        {
-            val response=IdpResponse.fromResultIntent(data)
-            if (resultCode==Activity.RESULT_OK)
-            {
-                val user=FirebaseAuth.getInstance().currentUser //get curren t user
-                Toast.makeText(this, "" +user!!.displayName,Toast.LENGTH_SHORT).show()
-
-
-
-
-                //btn_sign_out.isEnabled=true
-              //  mostrar_formulario_registro(user!!.displayName, user!!.email, user!!.photoUrl,user!!.phoneNumber)
-                guardar_datos_perfil(user!!.displayName, user!!.email, user!!.photoUrl,user!!.phoneNumber)
-
-                mostrar_menu()
-            }
-            else
-            {
-                Toast.makeText(this,"" + response!!.error!!.message, Toast.LENGTH_SHORT).show()
-            }
-        }
 
     }
 }
